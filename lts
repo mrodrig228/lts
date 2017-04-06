@@ -1,0 +1,15 @@
+#!/bin/python
+#This only works when logged into mariocst at VSI test server
+# Go to directly /home/mariocst/python before running
+
+#stamp = 1490308630
+
+import time as t
+from lts_td import lts_td
+f = open('stamp', 'r')
+stamp = int(f.read())
+f.close()
+now = int(t.time())
+elapsed = now - stamp
+
+print 'It has been', lts_td(elapsed), 'since you started this script.'
